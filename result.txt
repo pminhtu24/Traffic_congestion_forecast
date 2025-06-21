@@ -1,0 +1,10 @@
+test_FEDformer_random_modes64_ETTh1_ftS_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_test_0  
+mse:0.6310897469520569, mae:0.5616385340690613, rmse:0.7944115996360779, mape:1.6223046779632568
+
+
+
+test_FEDformer_random_modes64_ETTh1_ftS_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_test_1  
+mse:0.6028109788894653, mae:0.553489089012146, rmse:0.7764090299606323, mape:1.5688689947128296
+
+
+
