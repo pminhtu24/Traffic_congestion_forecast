@@ -1,12 +1,13 @@
 # Training
 python -u run.py \
   --is_training 1 \
+  --data custom \
   --root_path ./dataset/ \
   --data_path /home/tupham/Downloads/updated_traffic_data_formatted.csv \
   --model FEDformer \
-  --batch_size 8 \
-  --train_epochs 20 \
-  --patience 2 \
+  --batch_size 256 \
+  --train_epochs 10 \
+  --patience 3 \
   --freq='t' \
   --detail_freq='t' \
   --seq_len 96 \
