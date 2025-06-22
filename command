@@ -4,7 +4,7 @@ python -u run.py \
   --data_path /home/tupham/Downloads/updated_traffic_data_formatted.csv \
   --model FEDformer \
   --batch_size 8 \
-  --train_epochs 5 \
+  --train_epochs 20 \
   --patience 2 \
   --freq='t' \
   --detail_freq='t' \

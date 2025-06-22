@@ -112,10 +112,7 @@ def main():
         cross_activation='tanh'
     )
 
-    # Khởi tạo mô hình
     model = Model(args).to(device)
-
-    # Tải trọng số
     try:
         checkpoint = torch.load(weight_path, map_location=device)
         model.load_state_dict(checkpoint)
@@ -135,7 +132,6 @@ def main():
     last_date = historical_dates[-1]
     forecast_dates = [last_date + timedelta(minutes=i) for i in range(1, pred_len + 1)]
 
-    # Vẽ biểu đồ
     plt.figure(figsize=(12, 6))
     plt.plot(historical_dates, historical_values, label='Dữ liệu lịch sử', color='#1e90ff', linewidth=2)
     plt.plot(forecast_dates, predictions, label='Dữ liệu dự báo', color='#ff4500', linewidth=2, linestyle='--')
@@ -147,11 +143,9 @@ def main():
     plt.xticks(rotation=45)
     plt.tight_layout()
 
-    # Lưu và hiển thị
     plt.savefig('traffic_forecast.png')
     plt.show()
 
-    # In thông tin
     print(f"Số điểm dữ liệu lịch sử: {len(historical_values)}")
     print(f"Số điểm dữ liệu dự báo: {len(predictions)}")
     print(f"Trung bình số xe lịch sử: {historical_values.mean():.2f}")
