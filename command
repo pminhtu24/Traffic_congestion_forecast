@@ -1,3 +1,4 @@
+# Training
 python -u run.py \
   --is_training 1 \
   --root_path ./dataset/ \
@@ -22,3 +23,30 @@ python -u run.py \
   --d_model 512 \
   --itr 2 \
   --do_predict
+
+
+ # Testing with ouput vehicle data count from YOLO
+ python -u run.py \
+    --is_training 0 \
+    --task_id test \
+    --root_path ./dataset/ \
+    --data_path \
+    --model FEDformer \
+    --batch_size 8 \
+    --train_epochs 15 \
+    --patience 3 \
+    --freq='t' \
+    --detail_freq='t' \
+    --seq_len 6 \
+    --label_len 3 \
+    --pred_len 24 \
+    --features S \
+    --target Vehicles \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 1 \
+    --enc_in 1 \
+    --dec_in 1 \
+    --d_model 512 \
+    --itr 3 \
+    --do_predict
