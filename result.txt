@@ -8,3 +8,8 @@ mse:0.6028109788894653, mae:0.553489089012146, rmse:0.7764090299606323, mape:1.5
 
 
 
+test_FEDformer_ETTh1_ftS_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_test_0  
+mse:nan, mae:nan, rmse:nan, mape:nan
+
+
+
