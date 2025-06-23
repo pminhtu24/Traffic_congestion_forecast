@@ -69,7 +69,7 @@ class series_decomp_multi(nn.Module):
         moving_mean=torch.cat(moving_mean,dim=-1)
         moving_mean = torch.sum(moving_mean*nn.Softmax(-1)(self.layer(x.unsqueeze(-1))),dim=-1)
         res = x - moving_mean
-        return res, moving_mean 
+        return res, moving_mean
 
 
 class FourierDecomp(nn.Module):
